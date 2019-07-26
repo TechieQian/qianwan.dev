@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "preserveConstEnums": true,
+    "target": "es6",
+    "jsx": "react",
+    "lib": ["es5", "es6", "dom"],
+    "sourceMap": true
+  },
+  "include": ["app/**/*"],
+  "exclude": ["node_modules"]
+}
