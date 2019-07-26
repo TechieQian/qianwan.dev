@@ -28,12 +28,6 @@
     }
   }
 
-  .blackstone {
-    background-color: #000;
-    padding: 10px 5px 0 5px;
-    color: #fff;
-  }
-
   header {
     margin-top: 20px;
     .header-top {
@@ -43,10 +37,24 @@
       .title {
         margin-bottom: 40px;
         letter-spacing: 3px;
-        animation: top-header-move 0.5s ease-out 1s;
+        animation: top-header-move 0.7s ease-out;
+      }
+      .subtitle {
+        animation: top-header-move 0.7s ease-out 0.5s;
+        animation-fill-mode: backwards;
+      }
+      .icon {
+        animation: fade-in 1s ease-in 0.5s;
+        animation-fill-mode: backwards;
       }
       span + span {
         margin-left: 20px;
+      }
+      a {
+        color: #4a4a4a;
+        &:hover {
+          color: #c6deff;
+        }
       }
     }
   }
@@ -69,5 +77,14 @@
   100% {
     opacity: 1;
     transform: translate(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

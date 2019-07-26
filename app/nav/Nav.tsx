@@ -9,20 +9,38 @@ export default function Nav(props) {
           <span>Software Engineer</span>
         </h2>
         <section>
-          <span className="icon">
-            <i className="fab fa-github fa-lg" />
-          </span>
-          <span className="icon">
-            <i className="fab fa-linkedin fa-lg" />
-          </span>
-          <span className="icon">
-            <i className="fa fa-envelope fa-lg" />
-          </span>
-          <span className="icon">
-            <i className="fab fa-twitter fa-lg" />
-          </span>
+          <IconLink
+            classNames="fab fa-github fa-lg"
+            link="https://github.com/TechieQian"
+            title="github"
+          />
+          <IconLink
+            classNames="fab fa-linkedin fa-lg"
+            link="https://www.linkedin.com/in/qianwan08/"
+            title="linkedin"
+          />
+          <IconLink
+            classNames="fa fa-envelope fa-lg"
+            link="mailto:qiansan@gmail.com"
+            title="email me"
+          />
+          <IconLink
+            classNames="fab fa-twitter fa-lg"
+            link="https://twitter.com/qiancodes"
+            title="twitter"
+          />
         </section>
       </section>
     </header>
+  );
+}
+
+function IconLink(props) {
+  return (
+    <span className="icon">
+      <a title={props.title} href={props.link} target="_blank">
+        <i className={props.classNames} />
+      </a>
+    </span>
   );
 }

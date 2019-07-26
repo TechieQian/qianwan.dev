@@ -242,16 +242,17 @@ function Nav(props) {
             React.createElement("h2", { className: "subtitle" },
                 React.createElement("span", null, "Software Engineer")),
             React.createElement("section", null,
-                React.createElement("span", { className: "icon" },
-                    React.createElement("i", { className: "fab fa-github fa-lg" })),
-                React.createElement("span", { className: "icon" },
-                    React.createElement("i", { className: "fab fa-linkedin fa-lg" })),
-                React.createElement("span", { className: "icon" },
-                    React.createElement("i", { className: "fa fa-envelope fa-lg" })),
-                React.createElement("span", { className: "icon" },
-                    React.createElement("i", { className: "fab fa-twitter fa-lg" }))))));
+                React.createElement(IconLink, { classNames: "fab fa-github fa-lg", link: "https://github.com/TechieQian", title: "github" }),
+                React.createElement(IconLink, { classNames: "fab fa-linkedin fa-lg", link: "https://www.linkedin.com/in/qianwan08/", title: "linkedin" }),
+                React.createElement(IconLink, { classNames: "fa fa-envelope fa-lg", link: "mailto:qiansan@gmail.com", title: "email me" }),
+                React.createElement(IconLink, { classNames: "fab fa-twitter fa-lg", link: "https://twitter.com/qiancodes", title: "twitter" })))));
 }
 exports.default = Nav;
+function IconLink(props) {
+    return (React.createElement("span", { className: "icon" },
+        React.createElement("a", { title: props.title, href: props.link, target: "_blank" },
+            React.createElement("i", { className: props.classNames }))));
+}
 
 
 /***/ }),
@@ -310,7 +311,7 @@ exports.push([module.i, "/*! bulma.io v0.7.4 | MIT License | github.com/jgthms/b
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".body {\n  margin-top: 25px; }\n  .body .intro {\n    max-width: 500px;\n    text-align: center;\n    margin: 0 auto;\n    line-height: 2;\n    font-size: 17px;\n    padding-bottom: 25px;\n    border-bottom: 1px solid #C6DEFF; }\n    .body .intro span > b {\n      background-color: #e8e8e8; }\n\n.menu {\n  max-width: 300px; }\n\n#app .subtitle {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  #app .subtitle .icon {\n    margin: 0 15px; }\n\n#app .blackstone {\n  background-color: #000;\n  padding: 10px 5px 0 5px;\n  color: #fff; }\n\n#app header {\n  margin-top: 20px; }\n  #app header .header-top {\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n    #app header .header-top .title {\n      margin-bottom: 40px;\n      letter-spacing: 3px;\n      animation: top-header-move 0.5s ease-out 1s; }\n    #app header .header-top span + span {\n      margin-left: 20px; }\n\n#app footer {\n  max-width: 500px;\n  font-size: 12px;\n  margin: 0 auto;\n  text-align: center;\n  margin-top: 25px; }\n\n@keyframes top-header-move {\n  0% {\n    opacity: 0;\n    transform: translateY(-30px); }\n  100% {\n    opacity: 1;\n    transform: translate(0); } }\n", ""]);
+exports.push([module.i, ".body {\n  margin-top: 25px; }\n  .body .intro {\n    max-width: 500px;\n    text-align: center;\n    margin: 0 auto;\n    line-height: 2;\n    font-size: 17px;\n    padding-bottom: 25px;\n    border-bottom: 1px solid #C6DEFF; }\n    .body .intro span > b {\n      background-color: #e8e8e8; }\n\n.menu {\n  max-width: 300px; }\n\n#app .subtitle {\n  display: flex;\n  justify-content: space-between;\n  align-items: center; }\n  #app .subtitle .icon {\n    margin: 0 15px; }\n\n#app header {\n  margin-top: 20px; }\n  #app header .header-top {\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n    #app header .header-top .title {\n      margin-bottom: 40px;\n      letter-spacing: 3px;\n      animation: top-header-move 0.7s ease-out; }\n    #app header .header-top .subtitle {\n      animation: top-header-move 0.7s ease-out 0.5s;\n      animation-fill-mode: backwards; }\n    #app header .header-top .icon {\n      animation: fade-in 1s ease-in 0.5s;\n      animation-fill-mode: backwards; }\n    #app header .header-top span + span {\n      margin-left: 20px; }\n    #app header .header-top a {\n      color: #4a4a4a; }\n      #app header .header-top a:hover {\n        color: #c6deff; }\n\n#app footer {\n  max-width: 500px;\n  font-size: 12px;\n  margin: 0 auto;\n  text-align: center;\n  margin-top: 25px; }\n\n@keyframes top-header-move {\n  0% {\n    opacity: 0;\n    transform: translateY(-30px); }\n  100% {\n    opacity: 1;\n    transform: translate(0); } }\n\n@keyframes fade-in {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n", ""]);
 
 
 
