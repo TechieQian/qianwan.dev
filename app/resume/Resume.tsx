@@ -1,6 +1,23 @@
 import * as React from "react";
-import { NavLink } from "react-router-dom";
+import axios from "axios";
+import Form from "./Form";
 
 export default function Footer() {
-  return <section className="content">Thank you for being interested.</section>;
+  function postForm(formObj) {
+    axios
+      .post(
+        "https://qtb3jd3vrl.execute-api.us-east-2.amazonaws.com/prod/forward_form",
+        formObj
+      )
+      .then(res => {
+        window.open("https://qianwan.dev/doc/Qian_Wan_0719.docx");
+      });
+  }
+
+  return (
+    <section className="content">
+      <div className="resume-text">Thank you for your interest.</div>
+      <Form onPost={postForm} />
+    </section>
+  );
 }

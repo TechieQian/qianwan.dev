@@ -19,8 +19,9 @@ class Main extends React.Component {
         <Nav />
         <article className="body">
           <Switch>
-            <Route exact path="/resume" component={Resume} />
-            <Route component={Body} />
+            {/* <Route exact path="/resume" component={Resume} /> */}
+            {/* <Route component={Body} /> */}
+            <Route component={Resume} />
           </Switch>
         </article>
 

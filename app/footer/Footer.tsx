@@ -4,11 +4,11 @@ import { NavLink } from "react-router-dom";
 export default function Footer() {
   return (
     <footer>
-      <NavLink to={"resume"}>Résumé</NavLink>
       <div>
         This page was created with React and TypeScript. Yes. Calling an
-        airstrike on a tricycle.
-        <p>© 2019 by qian</p>
+        airstrike on a tricycle.{" "}
+        <NavLink to={"resume"}>Download my résumé</NavLink>
+        <p style={{ marginTop: "5px" }}>© 2019 by qian</p>
       </div>
     </footer>
   );

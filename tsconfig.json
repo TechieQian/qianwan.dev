@@ -6,7 +6,8 @@
     "target": "es6",
     "jsx": "react",
     "lib": ["es5", "es6", "dom"],
-    "sourceMap": true
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["app/**/*"],
   "exclude": ["node_modules"]
