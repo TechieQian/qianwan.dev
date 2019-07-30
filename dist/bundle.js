@@ -349,7 +349,7 @@ const react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_m
 function Footer() {
     return (React.createElement("footer", null,
         React.createElement("div", null,
-            "This page was created with React, TypeScript and AWS. Yes. Calling an airstrike on a tricycle.",
+            "This client-only page was created with React, TypeScript and AWS. Yes. Calling an airstrike on a tricycle.",
             " ",
             React.createElement(react_router_dom_1.NavLink, { to: "resume" }, "Download my r\u00E9sum\u00E9"),
             React.createElement("p", { style: { marginTop: "5px" } }, "\u00A9 2019 by qian"))));
