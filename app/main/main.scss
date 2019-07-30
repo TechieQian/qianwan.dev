@@ -16,6 +16,9 @@
       height: 150px;
       animation: fade-in 1s ease-in;
       animation-fill-mode: backwards;
+      &:hover {
+        cursor: pointer;
+      }
     }
     .header-top {
       text-align: center;

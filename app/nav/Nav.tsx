@@ -1,10 +1,24 @@
 import * as React from "react";
+import useToggle from "./useToggle";
 
 export default function Nav(props) {
+  const [toggleState, toggle] = useToggle();
+
+  function toggleNight() {
+    toggle();
+    const element = document.querySelector("html");
+    const bgColor = !toggleState ? "#191b1e" : "white";
+    element.setAttribute("style", `background-color : ${bgColor}`);
+  }
   return (
     <header className="container">
       <section className="header-top">
-        <img src="./dist/me.png" alt="me" />
+        <img
+          title="Click me."
+          onClick={toggleNight}
+          src="./dist/me.png"
+          alt="me"
+        />
         <h1 className="title">Qian Wan</h1>
         <h2 className="subtitle">
           <span>Software Engineer</span>
