@@ -16,7 +16,6 @@ export default function Footer() {
 
   return (
     <section className="content fade-in">
-      <div className="resume-text">Thank you for your interest.</div>
       <Form onPost={postForm} />
     </section>
   );
