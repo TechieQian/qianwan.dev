@@ -72,21 +72,23 @@ export default function Form(props: FormProps) {
         </div>
       </div>
       <Captcha onVerify={setCaptcha} />
-      <button
-        style={{ marginTop: "15px", marginRight: "15px" }}
-        disabled={!validateButton()}
-        className="button is-primary"
-        onClick={() => props.onPost({ name, email, institution, captcha })}
-      >
-        Download Résumé
-      </button>
-      <NavLink to="/" title="go back home.">
-        <button style={{ marginTop: "15px" }} className="button">
-          <span className="icon is-small">
-            <i className="fas fa-home" />
-          </span>
+      <div className="button_row">
+        <button
+          style={{ marginTop: "15px", marginRight: "15px" }}
+          disabled={!validateButton()}
+          className="button is-primary"
+          onClick={() => props.onPost({ name, email, institution, captcha })}
+        >
+          Download Résumé
         </button>
-      </NavLink>
+        <NavLink to="/" title="go back home.">
+          <button style={{ marginTop: "15px" }} className="button">
+            <span className="icon is-small">
+              <i className="fas fa-home" />
+            </span>
+          </button>
+        </NavLink>
+      </div>
     </div>
   );
 }

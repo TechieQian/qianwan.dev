@@ -4,6 +4,7 @@ export default function Nav(props) {
   return (
     <header className="container">
       <section className="header-top">
+        <img src="./dist/me.png" alt="me" />
         <h1 className="title">Qian Wan</h1>
         <h2 className="subtitle">
           <span>Software Engineer</span>

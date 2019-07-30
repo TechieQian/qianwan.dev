@@ -312,6 +312,28 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./app/body/Body.tsx":
+/*!***************************!*\
+  !*** ./app/body/Body.tsx ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function Body() {
+    return (React.createElement("div", { className: "content fade-in" },
+        React.createElement("span", null,
+            React.createElement("b", null, "Hello!"),
+            " My name is Qian and I am a software engineer with 10 years experience in fintech. I began creating webpages during the geocities days and had the pleasure/pain of coding through the webdev eras. In college I majored in computer engineering and obsessed over FPGA and C++. But I eventually found my way back home in webdev. My comfort is ASP.NET and React/TypeScript.")));
+}
+exports.default = Body;
+
+
+/***/ }),
+
 /***/ "./app/footer/Footer.tsx":
 /*!*******************************!*\
   !*** ./app/footer/Footer.tsx ***!
@@ -327,7 +349,7 @@ const react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_m
 function Footer() {
     return (React.createElement("footer", null,
         React.createElement("div", null,
-            "This page was created with React and TypeScript. Yes. Calling an airstrike on a tricycle.",
+            "This page was created with React, TypeScript and AWS. Yes. Calling an airstrike on a tricycle.",
             " ",
             React.createElement(react_router_dom_1.NavLink, { to: "resume" }, "Download my r\u00E9sum\u00E9"),
             React.createElement("p", { style: { marginTop: "5px" } }, "\u00A9 2019 by qian"))));
@@ -350,6 +372,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 const ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 const Nav_1 = __webpack_require__(/*! ../nav/Nav */ "./app/nav/Nav.tsx");
+const Body_1 = __webpack_require__(/*! ../body/Body */ "./app/body/Body.tsx");
 const Footer_1 = __webpack_require__(/*! ../footer/Footer */ "./app/footer/Footer.tsx");
 const Resume_1 = __webpack_require__(/*! ../resume/Resume */ "./app/resume/Resume.tsx");
 const react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
@@ -364,7 +387,8 @@ class Main extends React.Component {
             React.createElement(Nav_1.default, null),
             React.createElement("article", { className: "body" },
                 React.createElement(react_router_dom_1.Switch, null,
-                    React.createElement(react_router_dom_1.Route, { component: Resume_1.default }))),
+                    React.createElement(react_router_dom_1.Route, { exact: true, path: "/resume", component: Resume_1.default }),
+                    React.createElement(react_router_dom_1.Route, { component: Body_1.default }))),
             React.createElement(Footer_1.default, null)));
     }
 }
@@ -418,6 +442,7 @@ const React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 function Nav(props) {
     return (React.createElement("header", { className: "container" },
         React.createElement("section", { className: "header-top" },
+            React.createElement("img", { src: "./dist/me.png", alt: "me" }),
             React.createElement("h1", { className: "title" }, "Qian Wan"),
             React.createElement("h2", { className: "subtitle" },
                 React.createElement("span", null, "Software Engineer")),
@@ -511,11 +536,12 @@ function Form(props) {
             React.createElement("div", { className: "control" },
                 React.createElement("textarea", { className: "textarea", placeholder: "Message" }))),
         React.createElement(Captcha_1.default, { onVerify: setCaptcha }),
-        React.createElement("button", { style: { marginTop: "15px", marginRight: "15px" }, disabled: !validateButton(), className: "button is-primary", onClick: () => props.onPost({ name, email, institution, captcha }) }, "Download R\u00E9sum\u00E9"),
-        React.createElement(react_router_dom_1.NavLink, { to: "/", title: "go back home." },
-            React.createElement("button", { style: { marginTop: "15px" }, className: "button" },
-                React.createElement("span", { className: "icon is-small" },
-                    React.createElement("i", { className: "fas fa-home" }))))));
+        React.createElement("div", { className: "button_row" },
+            React.createElement("button", { style: { marginTop: "15px", marginRight: "15px" }, disabled: !validateButton(), className: "button is-primary", onClick: () => props.onPost({ name, email, institution, captcha }) }, "Download R\u00E9sum\u00E9"),
+            React.createElement(react_router_dom_1.NavLink, { to: "/", title: "go back home." },
+                React.createElement("button", { style: { marginTop: "15px" }, className: "button" },
+                    React.createElement("span", { className: "icon is-small" },
+                        React.createElement("i", { className: "fas fa-home" })))))));
 }
 exports.default = Form;
 
@@ -543,7 +569,7 @@ function Footer() {
             window.open("https://qianwan.dev/doc/Qian_Wan_0719.docx");
         });
     }
-    return (React.createElement("section", { className: "content" },
+    return (React.createElement("section", { className: "content fade-in" },
         React.createElement("div", { className: "resume-text" }, "Thank you for your interest."),
         React.createElement(Form_1.default, { onPost: postForm })));
 }
@@ -2401,7 +2427,7 @@ exports.push([module.i, "/*! bulma.io v0.7.4 | MIT License | github.com/jgthms/b
 
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, "#app .subtitle .icon {\n  margin: 0 15px; }\n\n#app header {\n  margin-top: 15vh; }\n  #app header .header-top {\n    text-align: center;\n    margin: 0 auto; }\n    #app header .header-top .title {\n      margin-bottom: 40px;\n      letter-spacing: 3px;\n      animation: top-header-move 0.7s ease-out; }\n    #app header .header-top .subtitle {\n      animation: top-header-move 0.7s ease-out 0.5s;\n      animation-fill-mode: backwards; }\n    #app header .header-top .icon {\n      animation: fade-in 1s ease-in 0.5s;\n      animation-fill-mode: backwards; }\n    #app header .header-top span + span {\n      margin-left: 22px; }\n    #app header .header-top a {\n      color: #4a4a4a; }\n      #app header .header-top a:hover {\n        color: #c6deff; }\n\n#app .resume-text {\n  margin-bottom: 15px;\n  text-align: center; }\n\n#app .body {\n  margin-top: 25px; }\n  #app .body .content {\n    max-width: 350px;\n    text-align: justify;\n    margin: 0 auto;\n    line-height: 2;\n    font-size: 17px;\n    padding-bottom: 25px;\n    border-bottom: 1px solid #C6DEFF; }\n    #app .body .content span > b {\n      background-color: #e8e8e8; }\n\n#app .menu {\n  max-width: 300px; }\n\n#app footer {\n  max-width: 350px;\n  font-size: 12px;\n  margin: 0 auto;\n  text-align: center;\n  margin-top: 50px; }\n\n@keyframes top-header-move {\n  0% {\n    opacity: 0;\n    transform: translateY(-30px); }\n  100% {\n    opacity: 1;\n    transform: translate(0); } }\n\n@keyframes fade-in {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n", ""]);
+exports.push([module.i, "#app .subtitle .icon {\n  margin: 0 15px; }\n\n#app .fade-in {\n  animation: fade-in 0.5s ease-in;\n  animation-fill-mode: backwards; }\n\n#app header {\n  margin-top: 13vh; }\n  #app header img {\n    border-radius: 50%;\n    height: 150px;\n    animation: fade-in 1s ease-in;\n    animation-fill-mode: backwards; }\n  #app header .header-top {\n    text-align: center;\n    margin: 0 auto; }\n    #app header .header-top .title {\n      margin-bottom: 40px;\n      letter-spacing: 3px;\n      animation: top-header-move 0.7s ease-out; }\n    #app header .header-top .subtitle {\n      animation: top-header-move 0.7s ease-out 0.5s;\n      animation-fill-mode: backwards; }\n    #app header .header-top .icon {\n      animation: fade-in 1s ease-in 0.5s;\n      animation-fill-mode: backwards; }\n    #app header .header-top span + span {\n      margin-left: 22px; }\n    #app header .header-top a {\n      color: #4a4a4a; }\n      #app header .header-top a:hover {\n        color: #c6deff; }\n\n#app .resume-text {\n  margin-bottom: 15px;\n  text-align: center; }\n\n#app .result-form .button-row {\n  display: flex; }\n\n#app .body {\n  margin-top: 25px; }\n  #app .body .content {\n    max-width: 350px;\n    text-align: justify;\n    margin: 0 auto;\n    line-height: 2;\n    font-size: 17px;\n    padding-bottom: 25px;\n    border-bottom: 1px solid #C6DEFF; }\n    #app .body .content span > b {\n      background-color: #e8e8e8; }\n\n#app .menu {\n  max-width: 300px; }\n\n#app footer {\n  max-width: 350px;\n  font-size: 12px;\n  margin: 0 auto;\n  text-align: center;\n  margin-top: 50px; }\n\n@keyframes top-header-move {\n  0% {\n    opacity: 0;\n    transform: translateY(-30px); }\n  100% {\n    opacity: 1;\n    transform: translate(0); } }\n\n@keyframes fade-in {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n", ""]);
 
 
 

@@ -5,8 +5,18 @@
     }
   }
 
+  .fade-in {
+    animation: fade-in 0.5s ease-in;
+    animation-fill-mode: backwards;
+  }
   header {
-    margin-top: 15vh;
+    margin-top: 13vh;
+    img {
+      border-radius: 50%;
+      height: 150px;
+      animation: fade-in 1s ease-in;
+      animation-fill-mode: backwards;
+    }
     .header-top {
       text-align: center;
       margin: 0 auto;
@@ -38,6 +48,12 @@
   .resume-text {
     margin-bottom: 15px;
     text-align: center;
+  }
+
+  .result-form {
+    .button-row {
+      display: flex;
+    }
   }
 
   .body {
